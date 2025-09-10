@@ -575,3 +575,14 @@ define Device/verizon_cr1000a
 	DEVICE_PACKAGES := ipq-wifi-verizon_cr1000a ath11k-firmware-qcn9074 kmod-phy-realtek
 endef
 TARGET_DEVICES += verizon_cr1000a
+
+define Device/ELFCS-ELF1
+  $(call Device/FitImage)
+  SOC := ipq8074
+  DEVICE_DTS = ipq8074-ELFCS-ELF1
+  DEVICE_VENDOR := ELFCS ELF1
+  DEVICE_MODEL := AX6000
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+endef
+TARGET_DEVICES += ELFCS-ELF1
